@@ -1,5 +1,5 @@
-import 'package:app/dialog/customdialog.dart';
-import 'package:app/ui/widgets/textformfield.dart';
+import 'package:LotteRota/dialog/customdialog.dart';
+import 'package:LotteRota/ui/widgets/textformfield.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:convert';

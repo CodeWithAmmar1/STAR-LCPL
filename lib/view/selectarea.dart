@@ -1,5 +1,5 @@
 
-import 'package:app/view/AreaReport.dart';
+import 'package:LotteRota/view/AreaReport.dart';
 import 'package:flutter/material.dart';
 
 import 'package:shared_preferences/shared_preferences.dart';

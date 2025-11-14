@@ -1,5 +1,5 @@
-import 'package:app/tabs/Qtab.dart';
-import 'package:app/view/HomePage.dart';
+import 'package:LotteRota/tabs/Qtab.dart';
+import 'package:LotteRota/view/HomePage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';

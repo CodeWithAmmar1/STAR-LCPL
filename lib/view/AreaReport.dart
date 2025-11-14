@@ -1,5 +1,5 @@
-import 'package:app/tabs/tabPage.dart';
-import 'package:app/tabs/tabPageView.dart';
+import 'package:LotteRota/tabs/tabPage.dart';
+import 'package:LotteRota/tabs/tabPageView.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:date_format/date_format.dart';

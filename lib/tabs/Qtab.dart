@@ -1,4 +1,4 @@
-import 'package:app/tabs/QtabPageView.dart';
+import 'package:LotteRota/tabs/QtabPageView.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

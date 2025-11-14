@@ -1,12 +1,12 @@
 
-import 'package:app/dialog/QReport.dart';
-import 'package:app/dialog/shiftchangerequest.dart';
-import 'package:app/screens/canfeedback.dart';
-import 'package:app/screens/carfeedback.dart';
-import 'package:app/view/QrGenerator.dart';
-import 'package:app/view/inOut.dart';
-import 'package:app/view/loginPage.dart';
-import 'package:app/view/selectarea.dart';
+import 'package:LotteRota/dialog/QReport.dart';
+import 'package:LotteRota/dialog/shiftchangerequest.dart';
+import 'package:LotteRota/screens/canfeedback.dart';
+import 'package:LotteRota/screens/carfeedback.dart';
+import 'package:LotteRota/view/QrGenerator.dart';
+import 'package:LotteRota/view/inOut.dart';
+import 'package:LotteRota/view/loginPage.dart';
+import 'package:LotteRota/view/selectarea.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

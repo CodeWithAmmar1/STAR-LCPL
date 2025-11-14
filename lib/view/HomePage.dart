@@ -12,7 +12,6 @@ import 'package:app/view/selectarea.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:speech_to_text/speech_to_text.dart';
 
 import 'inOut.dart';
 
@@ -346,12 +345,10 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                     ],
                   ),
 
-                  //////////////////////////////////////////////////////////////////////////////////////
                   SizedBox(
                     height: 20,
                   ),
 
-// Updated By Muhammad Fahad (01-07-24 till 05-07-24)
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[

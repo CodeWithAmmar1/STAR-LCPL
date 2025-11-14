@@ -1,13 +1,8 @@
-// Updated By Muhammad Fahad (01-07-24 till 05-07-24)
 
 import 'dart:convert';
-import 'package:flutter/rendering.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:intl/intl.dart';
-import 'package:cloud_firestore_platform_interface/cloud_firestore_platform_interface.dart';
 import 'package:flutter/material.dart';
-import 'dart:typed_data';
-import 'dart:ui' as ui;
 import 'package:http/http.dart' as http;
 import 'package:qr_flutter/qr_flutter.dart';
 import '../ui/widgets/textformfield.dart';
@@ -19,10 +14,8 @@ class QrGenerator extends StatefulWidget {
 
 class _QrGeneratorState extends State<QrGenerator> {
   TextEditingController _vehicleNo = TextEditingController();
-  TextEditingController _vehicleNoSearch = TextEditingController();
   final _scaffold = GlobalKey<ScaffoldState>();
   ValueNotifier<String> _valueNotify = ValueNotifier<String>('');
-  String _vehicleVal = '';
   GlobalKey _qrKey = GlobalKey();
   List<String> unregisteredVehicles = [];
   List<String> unregisteredVehiclesList = [];
@@ -52,7 +45,6 @@ class _QrGeneratorState extends State<QrGenerator> {
     } catch (e) {
       print('error in getcarqrno: $e');
     }
-    // getUnRegComp('http://144.126.197.51:5000/getunregcomp');
   }
 
   @override
@@ -372,143 +364,7 @@ class _QrGeneratorState extends State<QrGenerator> {
             SizedBox(
               height: height * 0.19,
             ),
-            // Row(
-            //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            //   children: <Widget>[
-            //     Container(
-            //       padding: EdgeInsets.only(left: 8),
-            //       child: Text('Unregistered Computers',
-            //           style: TextStyle(fontWeight: FontWeight.bold)),
-            //     ),
-            //     Container(
-            //       padding: EdgeInsets.only(right: 20),
-            //       child: ElevatedButton(
-            //         onPressed: () {
-            //           if (unregisteredComputers.isEmpty) {
-            //             showDialog(
-            //               context: context,
-            //               barrierDismissible: false,
-            //               builder: (context) => WillPopScope(
-            //                   onWillPop: () async => false,
-            //                   child: AlertDialog(
-            //                     shape: RoundedRectangleBorder(
-            //                       borderRadius: BorderRadius.circular(10),
-            //                     ),
-            //                     title: Container(
-            //                       width: double.maxFinite,
-            //                       decoration: BoxDecoration(
-            //                         color: Colors.red.shade900,
-            //                         borderRadius: BorderRadius.only(
-            //                           topLeft: Radius.circular(10),
-            //                           topRight: Radius.circular(10),
-            //                         ),
-            //                       ),
-            //                       height: 50,
-            //                       child: Center(
-            //                         child: Text(
-            //                           'No Item Available For QR Code',
-            //                           style: TextStyle(
-            //                               fontWeight: FontWeight.bold,
-            //                               fontSize: 20,
-            //                               color: Colors.white),
-            //                         ),
-            //                       ),
-            //                     ),
-            //                     titlePadding: EdgeInsets.zero,
-            //                     contentPadding: EdgeInsets.only(top: 10),
-            //                     content: Container(
-            //                       color: Colors.white,
-            //                       width: double.maxFinite,
-            //                       height: 40,
-            //                     ),
-            //                     actions: [
-            //                       TextButton(
-            //                         onPressed: () {
-            //                           Navigator.of(context).pop();
-            //                           Navigator.of(context).pop();
-            //                         },
-            //                         child: Text('Okay'),
-            //                       )
-            //                     ],
-            //                   )),
-            //             );
-            //             return;
-            //           }
-            //           showDialog(
-            //             context: context,
-            //             builder: (context) {
-            //               return AlertDialog(
-            //                 shape: RoundedRectangleBorder(
-            //                   borderRadius: BorderRadius.circular(10),
-            //                 ),
-            //                 backgroundColor: Colors.red.shade900,
-            //                 title: Center(
-            //                   child: Text(
-            //                     'Unregistered Computers',
-            //                     style: TextStyle(
-            //                         fontWeight: FontWeight.bold,
-            //                         fontSize: 20,
-            //                         color: Colors.white),
-            //                   ),
-            //                 ),
-            //                 titlePadding: EdgeInsets.all(16),
-            //                 contentPadding: EdgeInsets.only(top: 10),
-            //                 content: Column(
-            //                   mainAxisSize: MainAxisSize.min,
-            //                   children: [
-            //                     Container(
-            //                       color: Colors.white,
-            //                       width: double.maxFinite,
-            //                       height: height * 0.4,
-            //                       child: Scrollbar(
-            //                         controller: _scrollController,
-            //                         thumbVisibility: true,
-            //                         child: ListView.builder(
-            //                           controller: _scrollController,
-            //                           shrinkWrap: true,
-            //                           itemCount: unregisteredComputers.length,
-            //                           itemBuilder: (context, index) {
-            //                             return ListTile(
-            //                               title: Text(
-            //                                   unregisteredComputers[index]),
-            //                               onTap: () {
-            //                                 setState(() {
-            //                                   _vehicleNo.text =
-            //                                       unregisteredComputers[index];
-            //                                 });
-            //                                 Navigator.pop(context);
-            //                               },
-            //                             );
-            //                           },
-            //                         ),
-            //                       ),
-            //                     ),
-            //                   ],
-            //                 ),
-            //               );
-            //             },
-            //           );
-            //         },
-            //         child: Text(
-            //           'Select',
-            //           style: TextStyle(
-            //             fontWeight: FontWeight.bold,
-            //             fontSize: 16,
-            //           ),
-            //         ),
-            //         style: ElevatedButton.styleFrom(
-            //           backgroundColor: Colors.grey.shade300,
-            //           shape: RoundedRectangleBorder(
-            //             borderRadius: BorderRadius.circular(8),
-            //           ),
-            //         ),
-            //       ),
-            //     ),
-            //   ],
-            // ),
-            // SizedBox(
-            //   height: height * 0.2,
-            // ),
+         
             ValueListenableBuilder(
               valueListenable: _valueNotify,
               builder: (context, value, child) {

@@ -218,7 +218,7 @@ class _MainDrawerState extends State<MainDrawer> {
               }
             },
           ),
-// Updated By Muhammad Fahad (01-07-24 till 05-07-24)
+// Updated By Muhammad  (01-07-24 till 05-07-24)
           ListTile(
             leading: Icon(Icons.qr_code_scanner_outlined),
             title: Text(

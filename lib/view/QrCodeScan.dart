@@ -1,17 +1,12 @@
-// Updated By Muhammad Fahad (01-07-24 till 05-07-24)
 
 import 'dart:convert';
 import 'dart:io' as io;
 import 'package:speech_to_text/speech_recognition_result.dart';
 import 'package:speech_to_text/speech_to_text.dart';
-import 'package:archive/archive.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
-import 'package:cloud_firestore_platform_interface/cloud_firestore_platform_interface.dart';
 import '../ui/widgets/textformfield.dart';
-import 'package:google_mlkit_text_recognition/google_mlkit_text_recognition.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 // import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:http/http.dart' as http;

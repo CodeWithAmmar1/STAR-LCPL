@@ -1,4 +1,3 @@
-// Updated By Muhammad Fahad (01-07-24 till 05-07-24)
 import 'package:app/view/QrCodeScan.dart';
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';

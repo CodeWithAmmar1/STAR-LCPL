@@ -105,8 +105,6 @@ class _ShiftChange extends State<ShiftChange> {
         Uri.parse("http://144.126.197.51:5000/addsms"),
         headers: {"Content-Type": "application/json"},
         body: body);
-    var jsonBody = response.body;
-    var jsonData = json.decode(jsonBody);
     addCustShift();
     return json.decode(response.body);
   }

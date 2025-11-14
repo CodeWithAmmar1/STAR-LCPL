@@ -1,0 +1,16 @@
+<svg width="365" height="736" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <clipPath id="clip-dashboard_1">
+   <rect id="svg_1" height="736" width="365"/>
+  </clipPath>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="738" width="367" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect id="svg_2" fill="#4a4a4a" height="736" width="365"/>
+  <rect x="2.998" y="-109.145" fill="#ec2028" transform="rotate(30, 173.998, 43.855)" rx="82" height="306" width="342" id="Rectangle_12"/>
+ </g>
+</svg>

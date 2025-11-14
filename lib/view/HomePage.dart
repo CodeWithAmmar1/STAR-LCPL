@@ -73,7 +73,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         centerTitle: true,
         backgroundColor: Colors.red.shade700,
         title:
-            Text("LOTTE Chemical Pak.", style: TextStyle(color: Colors.white)),
+            Text("LOTTE Chemical Pak. ", style: TextStyle(color: Colors.white)),
         // actions: [
         //   Stack(
         //     children: [
@@ -118,6 +118,10 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
+                  Text(
+                    "  Configured by Ali Ammar \naliammar0342@gmail.com",
+                    style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),
+                  ),
                   Text(
                     "DASHBOARD",
                     style: TextStyle(

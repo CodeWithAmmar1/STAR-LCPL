@@ -47,29 +47,31 @@ class SplashScreenState extends State<SplashScreen>
       body: Stack(
         fit: StackFit.expand,
         children: <Widget>[
-          new Column(
+           Column(
             mainAxisAlignment: MainAxisAlignment.end,
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
+               Text("  Configured by Ali Ammar \naliammar0342@gmail.com",style: TextStyle(fontWeight: FontWeight.bold ),),
               Padding(
                   padding: EdgeInsets.only(bottom: 30.0),
-                  child: new Image.asset(
+                  child:  Image.asset(
                     'assets/images/powered_by.png',
                     height: 25.0,
                     fit: BoxFit.scaleDown,
                   ))
             ],
           ),
-          new Column(
+           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              new Image.asset(
+               Image.asset(
                 'assets/images/logo.png',
                 width: animation.value * 250,
                 height: animation.value * 250,
               ),
             ],
           ),
+          
         ],
       ),
     );

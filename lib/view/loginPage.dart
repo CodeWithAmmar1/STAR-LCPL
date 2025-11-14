@@ -47,6 +47,7 @@ class _LoginPageState extends State<LoginPage> {
           child: Column(
             children: <Widget>[
               clipShape(),
+              Text("  Configured by Ali Ammar \naliammar0342@gmail.com",style: TextStyle(fontWeight: FontWeight.bold ),),
               welcomeTextRow(),
               signInTextRow(),
               form(),
@@ -97,9 +98,6 @@ class _LoginPageState extends State<LoginPage> {
         sharedPreference.setString("staffno", data['STAFF_NO']);
         sharedPreference.setString("username", data['USER_NAME']);
         sharedPreference.setString("cellno", data['CELL_NO']);
-
-///////////////////////// New Query ////////////////////////////////
-
         var url1 = 'http://144.126.197.51:5000/verify/' + data['STAFF_NO'];
         var resp = await http.get(Uri.parse(url1),
             headers: {"Content-Type": "application/json"});
@@ -159,12 +157,6 @@ class _LoginPageState extends State<LoginPage> {
 
   Widget button() {
     return GestureDetector(
-      // style: ElevatedButton.styleFrom(
-      //   backgroundColor: Colors.transparent,
-      //   // elevation: 2,
-      //   shape:
-      //       RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
-      // ),
       onTap: useridController.text == "" || passwordController.text == ""
           ? null
           : () async {

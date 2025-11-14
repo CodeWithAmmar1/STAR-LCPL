@@ -1,6 +1,7 @@
 import 'package:app/ui/widgets/responsive_ui.dart';
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class PasswordTextField extends StatelessWidget {
   final String hint;
   final TextEditingController textEditingController;
